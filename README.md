@@ -30,5 +30,10 @@ To get started with the FastAPI application, follow the steps below:
     ```bash
     docker ps  # Get the CONTAINER ID
     docker stop <CONTAINER_ID>
+    
+    
+ ## Examples
+ 1. Create new user
+ ![image](https://github.com/hamidullaorifov/Bewise-Task-2/assets/101413208/8901a8fa-4dc5-4b28-b0f6-a9b4c485ce5f)
 
 
