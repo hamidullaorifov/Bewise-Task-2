@@ -67,7 +67,7 @@ Response
 6. Paste response url to your browser
 ![image](https://github.com/hamidullaorifov/Bewise-Task-2/assets/101413208/3710095f-b6e9-4502-b83e-b98de0ca8628)
 
-Result
+Result <br>
 ![image](https://github.com/hamidullaorifov/Bewise-Task-2/assets/101413208/38e7917f-0126-4b05-babf-d25da1c9269e)
 
 
