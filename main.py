@@ -1,10 +1,11 @@
-from fastapi import FastAPI,Depends,HTTPException,status,UploadFile,Request
+from fastapi import FastAPI,Depends,HTTPException,status,UploadFile,Request,Body
 from pydantic import BaseModel
 from sqlalchemy import and_
 from sqlalchemy.orm import Session
 from database import get_db,Base,engine,User,AudioRecord
 from uuid import uuid4
 from fastapi.responses import FileResponse
+from typing import Annotated
 
 
 
@@ -22,7 +23,7 @@ def get_file_extension(filename):
     return ""
 
 @app.post('/users',status_code=status.HTTP_201_CREATED)
-def create_user(user: UserRequest,db: Session = Depends(get_db)):
+def create_user(user: Annotated[UserRequest,Body(example={"username":"johndoe"})],db: Session = Depends(get_db)):
     """Creates a new user in the database."""
     if user.username.isspace() or not user.username:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,detail='Username cannot be blank')
